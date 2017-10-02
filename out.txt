@@ -1,0 +1,958 @@
+1 DALIS. Duomenys
+    1.1. Labirintas
+ 
+    Y, V ^
+      15 |   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
+      14 |   1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1 
+      13 |   1   1   1   1   0   1   1   0   1   1   1   1   1   1   1   0   1   1   0   1 
+      12 |   1   1   0   0   0   1   0   1   0   0   0   0   0   0   0   1   1   1   0   1 
+      11 |   1   0   0   1   1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   1 
+      10 |   1   0   1   0   0   0   1   1   1   1   1   1   0   0   0   0   1   0   0   1 
+       9 |   1   0   1   1   0   1   1   0   0   0   0   1   1   1   1   1   1   1   1   1 
+       8 |   1   0   0   1   0   0   0   0   1   0   0   0   0   0   0   0   0   0   1   1 
+       7 |   1   0   1   1   1   1   1   0   1   1   1   1   1   1   1   1   1   0   1   1 
+       6 |   1   0   0   0   0   0   1   0   1   1   0   0   0   0   0   0   0   0   1   1 
+       5 |   1   0   0   1   1   1   1   1   1   0   0   1   0   1   1   1   1   1   1   1 
+       4 |   1   0   1   0   2   0   0   0   0   1   1   1   0   0   0   0   0   0   1   1 
+       3 |   1   0   1   1   1   0   0   1   1   1   1   1   1   1   1   1   1   0   1   1 
+       2 |   1   0   0   1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1 
+       1 |   1   1   0   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
+         --------------------------------------------------------------------------------------------------> X, U
+             1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
+
+    1.2. Pradinė padėtis X=5, Y=4, L=2.
+
+2 DALIS. Vykdymas
+
+BANGA 0, žymė L="2". Pradinė padėtis X=5, Y=4, NAUJA=1.
+
+BANGA 1, žymė L="3"
+    Uždaroma UZD=1, X=5, Y=4.
+        R1. X=4, Y=4. Laisva. Nauja=2.
+        R2. X=5, Y=3. Siena.
+        R3. X=6, Y=4. Laisva. Nauja=3.
+        R4. X=5, Y=5. Siena.
+
+BANGA 2, žymė L="4"
+    Uždaroma UZD=2, X=4, Y=4.
+        R1. X=3, Y=4. Siena.
+        R2. X=4, Y=3. Siena.
+        R3. X=5, Y=4. UŽDARYTA arba ATIDARYTA.
+        R4. X=4, Y=5. Siena.
+
+    Uždaroma UZD=3, X=6, Y=4.
+        R1. X=5, Y=4. UŽDARYTA arba ATIDARYTA.
+        R2. X=6, Y=3. Laisva. Nauja=4.
+        R3. X=7, Y=4. Laisva. Nauja=5.
+        R4. X=6, Y=5. Siena.
+
+BANGA 3, žymė L="5"
+    Uždaroma UZD=4, X=6, Y=3.
+        R1. X=5, Y=3. Siena.
+        R2. X=6, Y=2. Laisva. Nauja=6.
+        R3. X=7, Y=3. Laisva. Nauja=7.
+        R4. X=6, Y=4. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=5, X=7, Y=4.
+        R1. X=6, Y=4. UŽDARYTA arba ATIDARYTA.
+        R2. X=7, Y=3. UŽDARYTA arba ATIDARYTA.
+        R3. X=8, Y=4. Laisva. Nauja=8.
+        R4. X=7, Y=5. Siena.
+
+BANGA 4, žymė L="6"
+    Uždaroma UZD=6, X=6, Y=2.
+        R1. X=5, Y=2. Siena.
+        R2. X=6, Y=1. Siena.
+        R3. X=7, Y=2. Laisva. Nauja=9.
+        R4. X=6, Y=3. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=7, X=7, Y=3.
+        R1. X=6, Y=3. UŽDARYTA arba ATIDARYTA.
+        R2. X=7, Y=2. UŽDARYTA arba ATIDARYTA.
+        R3. X=8, Y=3. Siena.
+        R4. X=7, Y=4. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=8, X=8, Y=4.
+        R1. X=7, Y=4. UŽDARYTA arba ATIDARYTA.
+        R2. X=8, Y=3. Siena.
+        R3. X=9, Y=4. Laisva. Nauja=10.
+        R4. X=8, Y=5. Siena.
+
+BANGA 5, žymė L="7"
+    Uždaroma UZD=9, X=7, Y=2.
+        R1. X=6, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=7, Y=1. Siena.
+        R3. X=8, Y=2. Laisva. Nauja=11.
+        R4. X=7, Y=3. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=10, X=9, Y=4.
+        R1. X=8, Y=4. UŽDARYTA arba ATIDARYTA.
+        R2. X=9, Y=3. Siena.
+        R3. X=10, Y=4. Siena.
+        R4. X=9, Y=5. Siena.
+
+BANGA 6, žymė L="8"
+    Uždaroma UZD=11, X=8, Y=2.
+        R1. X=7, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=8, Y=1. Siena.
+        R3. X=9, Y=2. Laisva. Nauja=12.
+        R4. X=8, Y=3. Siena.
+
+BANGA 7, žymė L="9"
+    Uždaroma UZD=12, X=9, Y=2.
+        R1. X=8, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=9, Y=1. Siena.
+        R3. X=10, Y=2. Laisva. Nauja=13.
+        R4. X=9, Y=3. Siena.
+
+BANGA 8, žymė L="10"
+    Uždaroma UZD=13, X=10, Y=2.
+        R1. X=9, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=10, Y=1. Siena.
+        R3. X=11, Y=2. Laisva. Nauja=14.
+        R4. X=10, Y=3. Siena.
+
+BANGA 9, žymė L="11"
+    Uždaroma UZD=14, X=11, Y=2.
+        R1. X=10, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=11, Y=1. Siena.
+        R3. X=12, Y=2. Laisva. Nauja=15.
+        R4. X=11, Y=3. Siena.
+
+BANGA 10, žymė L="12"
+    Uždaroma UZD=15, X=12, Y=2.
+        R1. X=11, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=12, Y=1. Siena.
+        R3. X=13, Y=2. Laisva. Nauja=16.
+        R4. X=12, Y=3. Siena.
+
+BANGA 11, žymė L="13"
+    Uždaroma UZD=16, X=13, Y=2.
+        R1. X=12, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=13, Y=1. Siena.
+        R3. X=14, Y=2. Laisva. Nauja=17.
+        R4. X=13, Y=3. Siena.
+
+BANGA 12, žymė L="14"
+    Uždaroma UZD=17, X=14, Y=2.
+        R1. X=13, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=14, Y=1. Siena.
+        R3. X=15, Y=2. Laisva. Nauja=18.
+        R4. X=14, Y=3. Siena.
+
+BANGA 13, žymė L="15"
+    Uždaroma UZD=18, X=15, Y=2.
+        R1. X=14, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=15, Y=1. Siena.
+        R3. X=16, Y=2. Laisva. Nauja=19.
+        R4. X=15, Y=3. Siena.
+
+BANGA 14, žymė L="16"
+    Uždaroma UZD=19, X=16, Y=2.
+        R1. X=15, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=16, Y=1. Siena.
+        R3. X=17, Y=2. Laisva. Nauja=20.
+        R4. X=16, Y=3. Siena.
+
+BANGA 15, žymė L="17"
+    Uždaroma UZD=20, X=17, Y=2.
+        R1. X=16, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=17, Y=1. Siena.
+        R3. X=18, Y=2. Laisva. Nauja=21.
+        R4. X=17, Y=3. Siena.
+
+BANGA 16, žymė L="18"
+    Uždaroma UZD=21, X=18, Y=2.
+        R1. X=17, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=18, Y=1. Siena.
+        R3. X=19, Y=2. Laisva. Nauja=22.
+        R4. X=18, Y=3. Laisva. Nauja=23.
+
+BANGA 17, žymė L="19"
+    Uždaroma UZD=22, X=19, Y=2.
+        R1. X=18, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=19, Y=1. Siena.
+        R3. X=20, Y=2. Siena.
+        R4. X=19, Y=3. Siena.
+
+    Uždaroma UZD=23, X=18, Y=3.
+        R1. X=17, Y=3. Siena.
+        R2. X=18, Y=2. UŽDARYTA arba ATIDARYTA.
+        R3. X=19, Y=3. Siena.
+        R4. X=18, Y=4. Laisva. Nauja=24.
+
+BANGA 18, žymė L="20"
+    Uždaroma UZD=24, X=18, Y=4.
+        R1. X=17, Y=4. Laisva. Nauja=25.
+        R2. X=18, Y=3. UŽDARYTA arba ATIDARYTA.
+        R3. X=19, Y=4. Siena.
+        R4. X=18, Y=5. Siena.
+
+BANGA 19, žymė L="21"
+    Uždaroma UZD=25, X=17, Y=4.
+        R1. X=16, Y=4. Laisva. Nauja=26.
+        R2. X=17, Y=3. Siena.
+        R3. X=18, Y=4. UŽDARYTA arba ATIDARYTA.
+        R4. X=17, Y=5. Siena.
+
+BANGA 20, žymė L="22"
+    Uždaroma UZD=26, X=16, Y=4.
+        R1. X=15, Y=4. Laisva. Nauja=27.
+        R2. X=16, Y=3. Siena.
+        R3. X=17, Y=4. UŽDARYTA arba ATIDARYTA.
+        R4. X=16, Y=5. Siena.
+
+BANGA 21, žymė L="23"
+    Uždaroma UZD=27, X=15, Y=4.
+        R1. X=14, Y=4. Laisva. Nauja=28.
+        R2. X=15, Y=3. Siena.
+        R3. X=16, Y=4. UŽDARYTA arba ATIDARYTA.
+        R4. X=15, Y=5. Siena.
+
+BANGA 22, žymė L="24"
+    Uždaroma UZD=28, X=14, Y=4.
+        R1. X=13, Y=4. Laisva. Nauja=29.
+        R2. X=14, Y=3. Siena.
+        R3. X=15, Y=4. UŽDARYTA arba ATIDARYTA.
+        R4. X=14, Y=5. Siena.
+
+BANGA 23, žymė L="25"
+    Uždaroma UZD=29, X=13, Y=4.
+        R1. X=12, Y=4. Siena.
+        R2. X=13, Y=3. Siena.
+        R3. X=14, Y=4. UŽDARYTA arba ATIDARYTA.
+        R4. X=13, Y=5. Laisva. Nauja=30.
+
+BANGA 24, žymė L="26"
+    Uždaroma UZD=30, X=13, Y=5.
+        R1. X=12, Y=5. Siena.
+        R2. X=13, Y=4. UŽDARYTA arba ATIDARYTA.
+        R3. X=14, Y=5. Siena.
+        R4. X=13, Y=6. Laisva. Nauja=31.
+
+BANGA 25, žymė L="27"
+    Uždaroma UZD=31, X=13, Y=6.
+        R1. X=12, Y=6. Laisva. Nauja=32.
+        R2. X=13, Y=5. UŽDARYTA arba ATIDARYTA.
+        R3. X=14, Y=6. Laisva. Nauja=33.
+        R4. X=13, Y=7. Siena.
+
+BANGA 26, žymė L="28"
+    Uždaroma UZD=32, X=12, Y=6.
+        R1. X=11, Y=6. Laisva. Nauja=34.
+        R2. X=12, Y=5. Siena.
+        R3. X=13, Y=6. UŽDARYTA arba ATIDARYTA.
+        R4. X=12, Y=7. Siena.
+
+    Uždaroma UZD=33, X=14, Y=6.
+        R1. X=13, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=14, Y=5. Siena.
+        R3. X=15, Y=6. Laisva. Nauja=35.
+        R4. X=14, Y=7. Siena.
+
+BANGA 27, žymė L="29"
+    Uždaroma UZD=34, X=11, Y=6.
+        R1. X=10, Y=6. Siena.
+        R2. X=11, Y=5. Laisva. Nauja=36.
+        R3. X=12, Y=6. UŽDARYTA arba ATIDARYTA.
+        R4. X=11, Y=7. Siena.
+
+    Uždaroma UZD=35, X=15, Y=6.
+        R1. X=14, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=15, Y=5. Siena.
+        R3. X=16, Y=6. Laisva. Nauja=37.
+        R4. X=15, Y=7. Siena.
+
+BANGA 28, žymė L="30"
+    Uždaroma UZD=36, X=11, Y=5.
+        R1. X=10, Y=5. Laisva. Nauja=38.
+        R2. X=11, Y=4. Siena.
+        R3. X=12, Y=5. Siena.
+        R4. X=11, Y=6. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=37, X=16, Y=6.
+        R1. X=15, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=16, Y=5. Siena.
+        R3. X=17, Y=6. Laisva. Nauja=39.
+        R4. X=16, Y=7. Siena.
+
+BANGA 29, žymė L="31"
+    Uždaroma UZD=38, X=10, Y=5.
+        R1. X=9, Y=5. Siena.
+        R2. X=10, Y=4. Siena.
+        R3. X=11, Y=5. UŽDARYTA arba ATIDARYTA.
+        R4. X=10, Y=6. Siena.
+
+    Uždaroma UZD=39, X=17, Y=6.
+        R1. X=16, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=17, Y=5. Siena.
+        R3. X=18, Y=6. Laisva. Nauja=40.
+        R4. X=17, Y=7. Siena.
+
+BANGA 30, žymė L="32"
+    Uždaroma UZD=40, X=18, Y=6.
+        R1. X=17, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=18, Y=5. Siena.
+        R3. X=19, Y=6. Siena.
+        R4. X=18, Y=7. Laisva. Nauja=41.
+
+BANGA 31, žymė L="33"
+    Uždaroma UZD=41, X=18, Y=7.
+        R1. X=17, Y=7. Siena.
+        R2. X=18, Y=6. UŽDARYTA arba ATIDARYTA.
+        R3. X=19, Y=7. Siena.
+        R4. X=18, Y=8. Laisva. Nauja=42.
+
+BANGA 32, žymė L="34"
+    Uždaroma UZD=42, X=18, Y=8.
+        R1. X=17, Y=8. Laisva. Nauja=43.
+        R2. X=18, Y=7. UŽDARYTA arba ATIDARYTA.
+        R3. X=19, Y=8. Siena.
+        R4. X=18, Y=9. Siena.
+
+BANGA 33, žymė L="35"
+    Uždaroma UZD=43, X=17, Y=8.
+        R1. X=16, Y=8. Laisva. Nauja=44.
+        R2. X=17, Y=7. Siena.
+        R3. X=18, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=17, Y=9. Siena.
+
+BANGA 34, žymė L="36"
+    Uždaroma UZD=44, X=16, Y=8.
+        R1. X=15, Y=8. Laisva. Nauja=45.
+        R2. X=16, Y=7. Siena.
+        R3. X=17, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=16, Y=9. Siena.
+
+BANGA 35, žymė L="37"
+    Uždaroma UZD=45, X=15, Y=8.
+        R1. X=14, Y=8. Laisva. Nauja=46.
+        R2. X=15, Y=7. Siena.
+        R3. X=16, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=15, Y=9. Siena.
+
+BANGA 36, žymė L="38"
+    Uždaroma UZD=46, X=14, Y=8.
+        R1. X=13, Y=8. Laisva. Nauja=47.
+        R2. X=14, Y=7. Siena.
+        R3. X=15, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=14, Y=9. Siena.
+
+BANGA 37, žymė L="39"
+    Uždaroma UZD=47, X=13, Y=8.
+        R1. X=12, Y=8. Laisva. Nauja=48.
+        R2. X=13, Y=7. Siena.
+        R3. X=14, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=13, Y=9. Siena.
+
+BANGA 38, žymė L="40"
+    Uždaroma UZD=48, X=12, Y=8.
+        R1. X=11, Y=8. Laisva. Nauja=49.
+        R2. X=12, Y=7. Siena.
+        R3. X=13, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=12, Y=9. Siena.
+
+BANGA 39, žymė L="41"
+    Uždaroma UZD=49, X=11, Y=8.
+        R1. X=10, Y=8. Laisva. Nauja=50.
+        R2. X=11, Y=7. Siena.
+        R3. X=12, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=11, Y=9. Laisva. Nauja=51.
+
+BANGA 40, žymė L="42"
+    Uždaroma UZD=50, X=10, Y=8.
+        R1. X=9, Y=8. Siena.
+        R2. X=10, Y=7. Siena.
+        R3. X=11, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=10, Y=9. Laisva. Nauja=52.
+
+    Uždaroma UZD=51, X=11, Y=9.
+        R1. X=10, Y=9. UŽDARYTA arba ATIDARYTA.
+        R2. X=11, Y=8. UŽDARYTA arba ATIDARYTA.
+        R3. X=12, Y=9. Siena.
+        R4. X=11, Y=10. Siena.
+
+BANGA 41, žymė L="43"
+    Uždaroma UZD=52, X=10, Y=9.
+        R1. X=9, Y=9. Laisva. Nauja=53.
+        R2. X=10, Y=8. UŽDARYTA arba ATIDARYTA.
+        R3. X=11, Y=9. UŽDARYTA arba ATIDARYTA.
+        R4. X=10, Y=10. Siena.
+
+BANGA 42, žymė L="44"
+    Uždaroma UZD=53, X=9, Y=9.
+        R1. X=8, Y=9. Laisva. Nauja=54.
+        R2. X=9, Y=8. Siena.
+        R3. X=10, Y=9. UŽDARYTA arba ATIDARYTA.
+        R4. X=9, Y=10. Siena.
+
+BANGA 43, žymė L="45"
+    Uždaroma UZD=54, X=8, Y=9.
+        R1. X=7, Y=9. Siena.
+        R2. X=8, Y=8. Laisva. Nauja=55.
+        R3. X=9, Y=9. UŽDARYTA arba ATIDARYTA.
+        R4. X=8, Y=10. Siena.
+
+BANGA 44, žymė L="46"
+    Uždaroma UZD=55, X=8, Y=8.
+        R1. X=7, Y=8. Laisva. Nauja=56.
+        R2. X=8, Y=7. Laisva. Nauja=57.
+        R3. X=9, Y=8. Siena.
+        R4. X=8, Y=9. UŽDARYTA arba ATIDARYTA.
+
+BANGA 45, žymė L="47"
+    Uždaroma UZD=56, X=7, Y=8.
+        R1. X=6, Y=8. Laisva. Nauja=58.
+        R2. X=7, Y=7. Siena.
+        R3. X=8, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=7, Y=9. Siena.
+
+    Uždaroma UZD=57, X=8, Y=7.
+        R1. X=7, Y=7. Siena.
+        R2. X=8, Y=6. Laisva. Nauja=59.
+        R3. X=9, Y=7. Siena.
+        R4. X=8, Y=8. UŽDARYTA arba ATIDARYTA.
+
+BANGA 46, žymė L="48"
+    Uždaroma UZD=58, X=6, Y=8.
+        R1. X=5, Y=8. Laisva. Nauja=60.
+        R2. X=6, Y=7. Siena.
+        R3. X=7, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=6, Y=9. Siena.
+
+    Uždaroma UZD=59, X=8, Y=6.
+        R1. X=7, Y=6. Siena.
+        R2. X=8, Y=5. Siena.
+        R3. X=9, Y=6. Siena.
+        R4. X=8, Y=7. UŽDARYTA arba ATIDARYTA.
+
+BANGA 47, žymė L="49"
+    Uždaroma UZD=60, X=5, Y=8.
+        R1. X=4, Y=8. Siena.
+        R2. X=5, Y=7. Siena.
+        R3. X=6, Y=8. UŽDARYTA arba ATIDARYTA.
+        R4. X=5, Y=9. Laisva. Nauja=61.
+
+BANGA 48, žymė L="50"
+    Uždaroma UZD=61, X=5, Y=9.
+        R1. X=4, Y=9. Siena.
+        R2. X=5, Y=8. UŽDARYTA arba ATIDARYTA.
+        R3. X=6, Y=9. Siena.
+        R4. X=5, Y=10. Laisva. Nauja=62.
+
+BANGA 49, žymė L="51"
+    Uždaroma UZD=62, X=5, Y=10.
+        R1. X=4, Y=10. Laisva. Nauja=63.
+        R2. X=5, Y=9. UŽDARYTA arba ATIDARYTA.
+        R3. X=6, Y=10. Laisva. Nauja=64.
+        R4. X=5, Y=11. Siena.
+
+BANGA 50, žymė L="52"
+    Uždaroma UZD=63, X=4, Y=10.
+        R1. X=3, Y=10. Siena.
+        R2. X=4, Y=9. Siena.
+        R3. X=5, Y=10. UŽDARYTA arba ATIDARYTA.
+        R4. X=4, Y=11. Siena.
+
+    Uždaroma UZD=64, X=6, Y=10.
+        R1. X=5, Y=10. UŽDARYTA arba ATIDARYTA.
+        R2. X=6, Y=9. Siena.
+        R3. X=7, Y=10. Siena.
+        R4. X=6, Y=11. Laisva. Nauja=65.
+
+BANGA 51, žymė L="53"
+    Uždaroma UZD=65, X=6, Y=11.
+        R1. X=5, Y=11. Siena.
+        R2. X=6, Y=10. UŽDARYTA arba ATIDARYTA.
+        R3. X=7, Y=11. Laisva. Nauja=66.
+        R4. X=6, Y=12. Siena.
+
+BANGA 52, žymė L="54"
+    Uždaroma UZD=66, X=7, Y=11.
+        R1. X=6, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=7, Y=10. Siena.
+        R3. X=8, Y=11. Laisva. Nauja=67.
+        R4. X=7, Y=12. Laisva. Nauja=68.
+
+BANGA 53, žymė L="55"
+    Uždaroma UZD=67, X=8, Y=11.
+        R1. X=7, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=8, Y=10. Siena.
+        R3. X=9, Y=11. Laisva. Nauja=69.
+        R4. X=8, Y=12. Siena.
+
+    Uždaroma UZD=68, X=7, Y=12.
+        R1. X=6, Y=12. Siena.
+        R2. X=7, Y=11. UŽDARYTA arba ATIDARYTA.
+        R3. X=8, Y=12. Siena.
+        R4. X=7, Y=13. Siena.
+
+BANGA 54, žymė L="56"
+    Uždaroma UZD=69, X=9, Y=11.
+        R1. X=8, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=9, Y=10. Siena.
+        R3. X=10, Y=11. Laisva. Nauja=70.
+        R4. X=9, Y=12. Laisva. Nauja=71.
+
+BANGA 55, žymė L="57"
+    Uždaroma UZD=70, X=10, Y=11.
+        R1. X=9, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=10, Y=10. Siena.
+        R3. X=11, Y=11. Laisva. Nauja=72.
+        R4. X=10, Y=12. Laisva. Nauja=73.
+
+    Uždaroma UZD=71, X=9, Y=12.
+        R1. X=8, Y=12. Siena.
+        R2. X=9, Y=11. UŽDARYTA arba ATIDARYTA.
+        R3. X=10, Y=12. UŽDARYTA arba ATIDARYTA.
+        R4. X=9, Y=13. Siena.
+
+BANGA 56, žymė L="58"
+    Uždaroma UZD=72, X=11, Y=11.
+        R1. X=10, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=11, Y=10. Siena.
+        R3. X=12, Y=11. Laisva. Nauja=74.
+        R4. X=11, Y=12. Laisva. Nauja=75.
+
+    Uždaroma UZD=73, X=10, Y=12.
+        R1. X=9, Y=12. UŽDARYTA arba ATIDARYTA.
+        R2. X=10, Y=11. UŽDARYTA arba ATIDARYTA.
+        R3. X=11, Y=12. UŽDARYTA arba ATIDARYTA.
+        R4. X=10, Y=13. Siena.
+
+BANGA 57, žymė L="59"
+    Uždaroma UZD=74, X=12, Y=11.
+        R1. X=11, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=12, Y=10. Siena.
+        R3. X=13, Y=11. Siena.
+        R4. X=12, Y=12. Laisva. Nauja=76.
+
+    Uždaroma UZD=75, X=11, Y=12.
+        R1. X=10, Y=12. UŽDARYTA arba ATIDARYTA.
+        R2. X=11, Y=11. UŽDARYTA arba ATIDARYTA.
+        R3. X=12, Y=12. UŽDARYTA arba ATIDARYTA.
+        R4. X=11, Y=13. Siena.
+
+BANGA 58, žymė L="60"
+    Uždaroma UZD=76, X=12, Y=12.
+        R1. X=11, Y=12. UŽDARYTA arba ATIDARYTA.
+        R2. X=12, Y=11. UŽDARYTA arba ATIDARYTA.
+        R3. X=13, Y=12. Laisva. Nauja=77.
+        R4. X=12, Y=13. Siena.
+
+BANGA 59, žymė L="61"
+    Uždaroma UZD=77, X=13, Y=12.
+        R1. X=12, Y=12. UŽDARYTA arba ATIDARYTA.
+        R2. X=13, Y=11. Siena.
+        R3. X=14, Y=12. Laisva. Nauja=78.
+        R4. X=13, Y=13. Siena.
+
+BANGA 60, žymė L="62"
+    Uždaroma UZD=78, X=14, Y=12.
+        R1. X=13, Y=12. UŽDARYTA arba ATIDARYTA.
+        R2. X=14, Y=11. Laisva. Nauja=79.
+        R3. X=15, Y=12. Laisva. Nauja=80.
+        R4. X=14, Y=13. Siena.
+
+BANGA 61, žymė L="63"
+    Uždaroma UZD=79, X=14, Y=11.
+        R1. X=13, Y=11. Siena.
+        R2. X=14, Y=10. Laisva. Nauja=81.
+        R3. X=15, Y=11. Laisva. Nauja=82.
+        R4. X=14, Y=12. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=80, X=15, Y=12.
+        R1. X=14, Y=12. UŽDARYTA arba ATIDARYTA.
+        R2. X=15, Y=11. UŽDARYTA arba ATIDARYTA.
+        R3. X=16, Y=12. Siena.
+        R4. X=15, Y=13. Siena.
+
+BANGA 62, žymė L="64"
+    Uždaroma UZD=81, X=14, Y=10.
+        R1. X=13, Y=10. Laisva. Nauja=83.
+        R2. X=14, Y=9. Siena.
+        R3. X=15, Y=10. Laisva. Nauja=84.
+        R4. X=14, Y=11. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=82, X=15, Y=11.
+        R1. X=14, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=15, Y=10. UŽDARYTA arba ATIDARYTA.
+        R3. X=16, Y=11. Laisva. Nauja=85.
+        R4. X=15, Y=12. UŽDARYTA arba ATIDARYTA.
+
+BANGA 63, žymė L="65"
+    Uždaroma UZD=83, X=13, Y=10.
+        R1. X=12, Y=10. Siena.
+        R2. X=13, Y=9. Siena.
+        R3. X=14, Y=10. UŽDARYTA arba ATIDARYTA.
+        R4. X=13, Y=11. Siena.
+
+    Uždaroma UZD=84, X=15, Y=10.
+        R1. X=14, Y=10. UŽDARYTA arba ATIDARYTA.
+        R2. X=15, Y=9. Siena.
+        R3. X=16, Y=10. Laisva. Nauja=86.
+        R4. X=15, Y=11. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=85, X=16, Y=11.
+        R1. X=15, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=16, Y=10. UŽDARYTA arba ATIDARYTA.
+        R3. X=17, Y=11. Laisva. Nauja=87.
+        R4. X=16, Y=12. Siena.
+
+BANGA 64, žymė L="66"
+    Uždaroma UZD=86, X=16, Y=10.
+        R1. X=15, Y=10. UŽDARYTA arba ATIDARYTA.
+        R2. X=16, Y=9. Siena.
+        R3. X=17, Y=10. Siena.
+        R4. X=16, Y=11. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=87, X=17, Y=11.
+        R1. X=16, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=17, Y=10. Siena.
+        R3. X=18, Y=11. Laisva. Nauja=88.
+        R4. X=17, Y=12. Siena.
+
+BANGA 65, žymė L="67"
+    Uždaroma UZD=88, X=18, Y=11.
+        R1. X=17, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=18, Y=10. Laisva. Nauja=89.
+        R3. X=19, Y=11. Laisva. Nauja=90.
+        R4. X=18, Y=12. Siena.
+
+BANGA 66, žymė L="68"
+    Uždaroma UZD=89, X=18, Y=10.
+        R1. X=17, Y=10. Siena.
+        R2. X=18, Y=9. Siena.
+        R3. X=19, Y=10. Laisva. Nauja=91.
+        R4. X=18, Y=11. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=90, X=19, Y=11.
+        R1. X=18, Y=11. UŽDARYTA arba ATIDARYTA.
+        R2. X=19, Y=10. UŽDARYTA arba ATIDARYTA.
+        R3. X=20, Y=11. Siena.
+        R4. X=19, Y=12. Laisva. Nauja=92.
+
+BANGA 67, žymė L="69"
+    Uždaroma UZD=91, X=19, Y=10.
+        R1. X=18, Y=10. UŽDARYTA arba ATIDARYTA.
+        R2. X=19, Y=9. Siena.
+        R3. X=20, Y=10. Siena.
+        R4. X=19, Y=11. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=92, X=19, Y=12.
+        R1. X=18, Y=12. Siena.
+        R2. X=19, Y=11. UŽDARYTA arba ATIDARYTA.
+        R3. X=20, Y=12. Siena.
+        R4. X=19, Y=13. Laisva. Nauja=93.
+
+BANGA 68, žymė L="70"
+    Uždaroma UZD=93, X=19, Y=13.
+        R1. X=18, Y=13. Siena.
+        R2. X=19, Y=12. UŽDARYTA arba ATIDARYTA.
+        R3. X=20, Y=13. Siena.
+        R4. X=19, Y=14. Laisva. Nauja=94.
+
+BANGA 69, žymė L="71"
+    Uždaroma UZD=94, X=19, Y=14.
+        R1. X=18, Y=14. Laisva. Nauja=95.
+        R2. X=19, Y=13. UŽDARYTA arba ATIDARYTA.
+        R3. X=20, Y=14. Siena.
+        R4. X=19, Y=15. Siena.
+
+BANGA 70, žymė L="72"
+    Uždaroma UZD=95, X=18, Y=14.
+        R1. X=17, Y=14. Laisva. Nauja=96.
+        R2. X=18, Y=13. Siena.
+        R3. X=19, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=18, Y=15. Siena.
+
+BANGA 71, žymė L="73"
+    Uždaroma UZD=96, X=17, Y=14.
+        R1. X=16, Y=14. Laisva. Nauja=97.
+        R2. X=17, Y=13. Siena.
+        R3. X=18, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=17, Y=15. Siena.
+
+BANGA 72, žymė L="74"
+    Uždaroma UZD=97, X=16, Y=14.
+        R1. X=15, Y=14. Laisva. Nauja=98.
+        R2. X=16, Y=13. Laisva. Nauja=99.
+        R3. X=17, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=16, Y=15. Siena.
+
+BANGA 73, žymė L="75"
+    Uždaroma UZD=98, X=15, Y=14.
+        R1. X=14, Y=14. Laisva. Nauja=100.
+        R2. X=15, Y=13. Siena.
+        R3. X=16, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=15, Y=15. Siena.
+
+    Uždaroma UZD=99, X=16, Y=13.
+        R1. X=15, Y=13. Siena.
+        R2. X=16, Y=12. Siena.
+        R3. X=17, Y=13. Siena.
+        R4. X=16, Y=14. UŽDARYTA arba ATIDARYTA.
+
+BANGA 74, žymė L="76"
+    Uždaroma UZD=100, X=14, Y=14.
+        R1. X=13, Y=14. Laisva. Nauja=101.
+        R2. X=14, Y=13. Siena.
+        R3. X=15, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=14, Y=15. Siena.
+
+BANGA 75, žymė L="77"
+    Uždaroma UZD=101, X=13, Y=14.
+        R1. X=12, Y=14. Laisva. Nauja=102.
+        R2. X=13, Y=13. Siena.
+        R3. X=14, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=13, Y=15. Siena.
+
+BANGA 76, žymė L="78"
+    Uždaroma UZD=102, X=12, Y=14.
+        R1. X=11, Y=14. Laisva. Nauja=103.
+        R2. X=12, Y=13. Siena.
+        R3. X=13, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=12, Y=15. Siena.
+
+BANGA 77, žymė L="79"
+    Uždaroma UZD=103, X=11, Y=14.
+        R1. X=10, Y=14. Laisva. Nauja=104.
+        R2. X=11, Y=13. Siena.
+        R3. X=12, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=11, Y=15. Siena.
+
+BANGA 78, žymė L="80"
+    Uždaroma UZD=104, X=10, Y=14.
+        R1. X=9, Y=14. Laisva. Nauja=105.
+        R2. X=10, Y=13. Siena.
+        R3. X=11, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=10, Y=15. Siena.
+
+BANGA 79, žymė L="81"
+    Uždaroma UZD=105, X=9, Y=14.
+        R1. X=8, Y=14. Laisva. Nauja=106.
+        R2. X=9, Y=13. Siena.
+        R3. X=10, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=9, Y=15. Siena.
+
+BANGA 80, žymė L="82"
+    Uždaroma UZD=106, X=8, Y=14.
+        R1. X=7, Y=14. Laisva. Nauja=107.
+        R2. X=8, Y=13. Laisva. Nauja=108.
+        R3. X=9, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=8, Y=15. Siena.
+
+BANGA 81, žymė L="83"
+    Uždaroma UZD=107, X=7, Y=14.
+        R1. X=6, Y=14. Laisva. Nauja=109.
+        R2. X=7, Y=13. Siena.
+        R3. X=8, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=7, Y=15. Siena.
+
+    Uždaroma UZD=108, X=8, Y=13.
+        R1. X=7, Y=13. Siena.
+        R2. X=8, Y=12. Siena.
+        R3. X=9, Y=13. Siena.
+        R4. X=8, Y=14. UŽDARYTA arba ATIDARYTA.
+
+BANGA 82, žymė L="84"
+    Uždaroma UZD=109, X=6, Y=14.
+        R1. X=5, Y=14. Laisva. Nauja=110.
+        R2. X=6, Y=13. Siena.
+        R3. X=7, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=6, Y=15. Siena.
+
+BANGA 83, žymė L="85"
+    Uždaroma UZD=110, X=5, Y=14.
+        R1. X=4, Y=14. Laisva. Nauja=111.
+        R2. X=5, Y=13. Laisva. Nauja=112.
+        R3. X=6, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=5, Y=15. Siena.
+
+BANGA 84, žymė L="86"
+    Uždaroma UZD=111, X=4, Y=14.
+        R1. X=3, Y=14. Laisva. Nauja=113.
+        R2. X=4, Y=13. Siena.
+        R3. X=5, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=4, Y=15. Siena.
+
+    Uždaroma UZD=112, X=5, Y=13.
+        R1. X=4, Y=13. Siena.
+        R2. X=5, Y=12. Laisva. Nauja=114.
+        R3. X=6, Y=13. Siena.
+        R4. X=5, Y=14. UŽDARYTA arba ATIDARYTA.
+
+BANGA 85, žymė L="87"
+    Uždaroma UZD=113, X=3, Y=14.
+        R1. X=2, Y=14. Siena.
+        R2. X=3, Y=13. Siena.
+        R3. X=4, Y=14. UŽDARYTA arba ATIDARYTA.
+        R4. X=3, Y=15. Siena.
+
+    Uždaroma UZD=114, X=5, Y=12.
+        R1. X=4, Y=12. Laisva. Nauja=115.
+        R2. X=5, Y=11. Siena.
+        R3. X=6, Y=12. Siena.
+        R4. X=5, Y=13. UŽDARYTA arba ATIDARYTA.
+
+BANGA 86, žymė L="88"
+    Uždaroma UZD=115, X=4, Y=12.
+        R1. X=3, Y=12. Laisva. Nauja=116.
+        R2. X=4, Y=11. Siena.
+        R3. X=5, Y=12. UŽDARYTA arba ATIDARYTA.
+        R4. X=4, Y=13. Siena.
+
+BANGA 87, žymė L="89"
+    Uždaroma UZD=116, X=3, Y=12.
+        R1. X=2, Y=12. Siena.
+        R2. X=3, Y=11. Laisva. Nauja=117.
+        R3. X=4, Y=12. UŽDARYTA arba ATIDARYTA.
+        R4. X=3, Y=13. Siena.
+
+BANGA 88, žymė L="90"
+    Uždaroma UZD=117, X=3, Y=11.
+        R1. X=2, Y=11. Laisva. Nauja=118.
+        R2. X=3, Y=10. Siena.
+        R3. X=4, Y=11. Siena.
+        R4. X=3, Y=12. UŽDARYTA arba ATIDARYTA.
+
+BANGA 89, žymė L="91"
+    Uždaroma UZD=118, X=2, Y=11.
+        R1. X=1, Y=11. Siena.
+        R2. X=2, Y=10. Laisva. Nauja=119.
+        R3. X=3, Y=11. UŽDARYTA arba ATIDARYTA.
+        R4. X=2, Y=12. Siena.
+
+BANGA 90, žymė L="92"
+    Uždaroma UZD=119, X=2, Y=10.
+        R1. X=1, Y=10. Siena.
+        R2. X=2, Y=9. Laisva. Nauja=120.
+        R3. X=3, Y=10. Siena.
+        R4. X=2, Y=11. UŽDARYTA arba ATIDARYTA.
+
+BANGA 91, žymė L="93"
+    Uždaroma UZD=120, X=2, Y=9.
+        R1. X=1, Y=9. Siena.
+        R2. X=2, Y=8. Laisva. Nauja=121.
+        R3. X=3, Y=9. Siena.
+        R4. X=2, Y=10. UŽDARYTA arba ATIDARYTA.
+
+BANGA 92, žymė L="94"
+    Uždaroma UZD=121, X=2, Y=8.
+        R1. X=1, Y=8. Siena.
+        R2. X=2, Y=7. Laisva. Nauja=122.
+        R3. X=3, Y=8. Laisva. Nauja=123.
+        R4. X=2, Y=9. UŽDARYTA arba ATIDARYTA.
+
+BANGA 93, žymė L="95"
+    Uždaroma UZD=122, X=2, Y=7.
+        R1. X=1, Y=7. Siena.
+        R2. X=2, Y=6. Laisva. Nauja=124.
+        R3. X=3, Y=7. Siena.
+        R4. X=2, Y=8. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=123, X=3, Y=8.
+        R1. X=2, Y=8. UŽDARYTA arba ATIDARYTA.
+        R2. X=3, Y=7. Siena.
+        R3. X=4, Y=8. Siena.
+        R4. X=3, Y=9. Siena.
+
+BANGA 94, žymė L="96"
+    Uždaroma UZD=124, X=2, Y=6.
+        R1. X=1, Y=6. Siena.
+        R2. X=2, Y=5. Laisva. Nauja=125.
+        R3. X=3, Y=6. Laisva. Nauja=126.
+        R4. X=2, Y=7. UŽDARYTA arba ATIDARYTA.
+
+BANGA 95, žymė L="97"
+    Uždaroma UZD=125, X=2, Y=5.
+        R1. X=1, Y=5. Siena.
+        R2. X=2, Y=4. Laisva. Nauja=127.
+        R3. X=3, Y=5. Laisva. Nauja=128.
+        R4. X=2, Y=6. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=126, X=3, Y=6.
+        R1. X=2, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=3, Y=5. UŽDARYTA arba ATIDARYTA.
+        R3. X=4, Y=6. Laisva. Nauja=129.
+        R4. X=3, Y=7. Siena.
+
+BANGA 96, žymė L="98"
+    Uždaroma UZD=127, X=2, Y=4.
+        R1. X=1, Y=4. Siena.
+        R2. X=2, Y=3. Laisva. Nauja=130.
+        R3. X=3, Y=4. Siena.
+        R4. X=2, Y=5. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=128, X=3, Y=5.
+        R1. X=2, Y=5. UŽDARYTA arba ATIDARYTA.
+        R2. X=3, Y=4. Siena.
+        R3. X=4, Y=5. Siena.
+        R4. X=3, Y=6. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=129, X=4, Y=6.
+        R1. X=3, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=4, Y=5. Siena.
+        R3. X=5, Y=6. Laisva. Nauja=131.
+        R4. X=4, Y=7. Siena.
+
+BANGA 97, žymė L="99"
+    Uždaroma UZD=130, X=2, Y=3.
+        R1. X=1, Y=3. Siena.
+        R2. X=2, Y=2. Laisva. Nauja=132.
+        R3. X=3, Y=3. Siena.
+        R4. X=2, Y=4. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=131, X=5, Y=6.
+        R1. X=4, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=5, Y=5. Siena.
+        R3. X=6, Y=6. Laisva. Nauja=133.
+        R4. X=5, Y=7. Siena.
+
+BANGA 98, žymė L="100"
+    Uždaroma UZD=132, X=2, Y=2.
+        R1. X=1, Y=2. Siena.
+        R2. X=2, Y=1. Siena.
+        R3. X=3, Y=2. Laisva. Nauja=134.
+        R4. X=2, Y=3. UŽDARYTA arba ATIDARYTA.
+
+    Uždaroma UZD=133, X=6, Y=6.
+        R1. X=5, Y=6. UŽDARYTA arba ATIDARYTA.
+        R2. X=6, Y=5. Siena.
+        R3. X=7, Y=6. Siena.
+        R4. X=6, Y=7. Siena.
+
+BANGA 99, žymė L="101"
+    Uždaroma UZD=134, X=3, Y=2.
+        R1. X=2, Y=2. UŽDARYTA arba ATIDARYTA.
+        R2. X=3, Y=1. Laisva. Nauja=135. Terminalinė.
+
+ 
+ 3 Dalis Rezultatai
+    3.1 Kelias rastas.
+    3.2 Kelias grafiškai.
+ 
+LABCOPY
+    Y, V ^
+      15 |   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
+      14 |   1   1  86  85  84  83  82  81  80  79  78  77  76  75  74  73  72  71  70   1 
+      13 |   1   1   1   1  85   1   1  82   1   1   1   1   1   1   1  74   1   1  69   1 
+      12 |   1   1  88  87  86   1  54   1  56  57  58  59  60  61  62   1   1   1  68   1 
+      11 |   1  90  89   1   1  52  53  54  55  56  57  58   1  62  63  64  65  66  67   1 
+      10 |   1  91   1  51  50  51   1   1   1   1   1   1  64  63  64  65   1  67  68   1 
+       9 |   1  92   1   1  49   1   1  44  43  42  41   1   1   1   1   1   1   1   1   1 
+       8 |   1  93  94   1  48  47  46  45   1  41  40  39  38  37  36  35  34  33   1   1 
+       7 |   1  94   1   1   1   1   1  46   1   1   1   1   1   1   1   1   1  32   1   1 
+       6 |   1  95  96  97  98  99   1  47   1   1  28  27  26  27  28  29  30  31   1   1 
+       5 |   1  96  97   1   1   1   1   1   1  30  29   1  25   1   1   1   1   1   1   1 
+       4 |   1  97   1   3   2   3   4   5   6   1   1   1  24  23  22  21  20  19   1   1 
+       3 |   1  98   1   1   1   4   5   1   1   1   1   1   1   1   1   1   1  18   1   1 
+       2 |   1  99 100   1   1   5   6   7   8   9  10  11  12  13  14  15  16  17  18   1 
+       1 |   1   1 101   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
+         --------------------------------------------------------------------------------------------------> X, U
+             1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
+
+ 
+    3.3 Kelias taisyklėmis: R3, R3, R2, R2, R3, R3, R3, R3, R3, R3, R3, R3, R3, R3, R3, R4, R4, R1, R1, R1, R1, R1, R4, R4, R3, R3, R3, R3, R3, R4, R4, R1, R1, R1, R1, R1, R1, R1, R4, R1, R1, R1, R2, R1, R1, R1, R4, R4, R3, R4, R3, R3, R3, R3, R3, R3, R4, R3, R3, R3, R2, R3, R3, R3, R3, R4, R4, R4, R1, R1, R1, R1, R1, R1, R1, R1, R1, R1, R1, R1, R1, R1, R2, R2, R1, R1, R2, R1, R2, R2, R2, R2, R2, R2, R2, R2, R2, R3, R2, 
+
+    3.4 Kelias viršūnėmis: [X=5,Y=4], [X=6,Y=4], [X=7,Y=4], [X=7,Y=3], [X=7,Y=2], [X=8,Y=2], [X=9,Y=2], [X=10,Y=2], [X=11,Y=2], [X=12,Y=2], [X=13,Y=2], [X=14,Y=2], [X=15,Y=2], [X=16,Y=2], [X=17,Y=2], [X=18,Y=2], [X=18,Y=3], [X=18,Y=4], [X=17,Y=4], [X=16,Y=4], [X=15,Y=4], [X=14,Y=4], [X=13,Y=4], [X=13,Y=5], [X=13,Y=6], [X=14,Y=6], [X=15,Y=6], [X=16,Y=6], [X=17,Y=6], [X=18,Y=6], [X=18,Y=7], [X=18,Y=8], [X=17,Y=8], [X=16,Y=8], [X=15,Y=8], [X=14,Y=8], [X=13,Y=8], [X=12,Y=8], [X=11,Y=8], [X=11,Y=9], [X=10,Y=9], [X=9,Y=9], [X=8,Y=9], [X=8,Y=8], [X=7,Y=8], [X=6,Y=8], [X=5,Y=8], [X=5,Y=9], [X=5,Y=10], [X=6,Y=10], [X=6,Y=11], [X=7,Y=11], [X=8,Y=11], [X=9,Y=11], [X=10,Y=11], [X=11,Y=11], [X=12,Y=11], [X=12,Y=12], [X=13,Y=12], [X=14,Y=12], [X=15,Y=12], [X=15,Y=11], [X=16,Y=11], [X=17,Y=11], [X=18,Y=11], [X=19,Y=11], [X=19,Y=12], [X=19,Y=13], [X=19,Y=14], [X=18,Y=14], [X=17,Y=14], [X=16,Y=14], [X=15,Y=14], [X=14,Y=14], [X=13,Y=14], [X=12,Y=14], [X=11,Y=14], [X=10,Y=14], [X=9,Y=14], [X=8,Y=14], [X=7,Y=14], [X=6,Y=14], [X=5,Y=14], [X=5,Y=13], [X=5,Y=12], [X=4,Y=12], [X=3,Y=12], [X=3,Y=11], [X=2,Y=11], [X=2,Y=10], [X=2,Y=9], [X=2,Y=8], [X=2,Y=7], [X=2,Y=6], [X=2,Y=5], [X=2,Y=4], [X=2,Y=3], [X=2,Y=2], [X=3,Y=2], [X=3,Y=1]. 
